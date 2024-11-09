@@ -7,78 +7,74 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #ffffff;
-    padding: 5px;
-    line-height: 1.4;
+    padding: 40px;
+    line-height: 1.6;
     background-image: url("assets/darkpurple.jpg");
-    width: 100%;
 }
 
 .container {
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
-    overflow-x: hidden;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .bio-card {
     background-color: rgb(187, 121, 213);
-    border-radius: 8px;
+    border-radius: 15px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    padding: 5px;
+    padding: 2rem;
     width: 100%;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin: 0;
+    margin-bottom: 20px;
 }
 
 th {
-    width: 80px;
+    width: 150px;
     background-color: #ebc7fe;
     color: #1a237e;
     font-weight: 600;
-    font-size: 12px;
-    padding: 5px;
+    padding: 15px;
     border: 1px solid #ebc7fe;
+    text-align: left;
 }
 
 td {
-    padding: 5px;
+    padding: 15px;
     border: 1px solid #ebc7fe;
     text-align: left;
     word-wrap: break-word;
-    font-size: 12px;
 }
 
 .photo-cell {
-    width: 90px;
+    width: 200px;
     text-align: center;
     vertical-align: top;
     background-color: rgb(187, 121, 213);
 }
 
 .photo {
-    width: 80px;
+    width: 150px;
     height: auto;
-    border-radius: 6px;
-    border: 2px solid #ecadf5;
+    border-radius: 10px;
+    border: 3px solid #ecadf5;
     object-fit: cover;
 }
 
 ul {
     margin: 0;
-    padding-left: 10px;
+    padding-left: 20px;
     list-style-type: none;
 }
 
 ul li {
-    margin-bottom: 4px;
-    padding: 4px;
+    margin-bottom: 8px;
+    padding: 8px;
     background-color: #ffc5f5;
-    border-radius: 4px;
-    font-size: 12px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
 }
 
 ul li:hover {
@@ -86,10 +82,58 @@ ul li:hover {
     transform: translateX(5px);
 }
 
-/* Make sure links don't overflow */
-a {
-    word-break: break-all;
-    font-size: 12px;
+/* Mobile Responsive Design */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 5px;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        overflow-x: hidden;
+    }
+
+    .bio-card {
+        padding: 5px;
+        border-radius: 8px;
+    }
+
+    th {
+        width: 80px;
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    td {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    .photo-cell {
+        width: 90px;
+    }
+
+    .photo {
+        width: 80px;
+        border-width: 2px;
+    }
+
+    ul {
+        padding-left: 10px;
+    }
+
+    ul li {
+        margin-bottom: 4px;
+        padding: 4px;
+        font-size: 12px;
+    }
+
+    a {
+        word-break: break-all;
+        font-size: 12px;
+    }
 }
 
 /* Very small screens */
@@ -128,8 +172,10 @@ a {
     }
 }
 
-/* Prevent any horizontal scrolling */
-html, body {
-    max-width: 100%;
-    overflow-x: hidden;
+/* Prevent horizontal scrolling on mobile */
+@media screen and (max-width: 768px) {
+    html, body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
 }
