@@ -1,9 +1,11 @@
+/* Resetting default margins, padding, and box-sizing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Styling for the body with background image and padding */
 body {
     font-family: Arial, sans-serif;
     background-color: #ffffff;
@@ -12,11 +14,13 @@ body {
     background-image: url("assets/darkpurple.jpg");
 }
 
+/* Main container settings to center content */
 .container {
     max-width: 1000px;
     margin: 0 auto;
 }
 
+/* Styling for biodata card with background color, shadow, and padding */
 .bio-card {
     background-color: rgb(187, 121, 213);
     border-radius: 15px;
@@ -25,12 +29,14 @@ body {
     width: 100%;
 }
 
+/* Table styling to make full width with consistent borders */
 table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
 }
 
+/* Header cells styling with custom background, text color, and padding */
 th {
     width: 150px;
     background-color: #ebc7fe;
@@ -41,6 +47,7 @@ th {
     text-align: left;
 }
 
+/* Table data cell styling with padding and border */
 td {
     padding: 15px;
     border: 1px solid #ebc7fe;
@@ -48,6 +55,7 @@ td {
     word-wrap: break-word;
 }
 
+/* Styling for photo cell with center alignment and custom background */
 .photo-cell {
     width: 200px;
     text-align: center;
@@ -55,6 +63,7 @@ td {
     background-color: rgb(187, 121, 213);
 }
 
+/* Profile photo styling with rounded borders and fit */
 .photo {
     width: 150px;
     height: auto;
@@ -63,12 +72,14 @@ td {
     object-fit: cover;
 }
 
+/* List styling for items without default list markers */
 ul {
     margin: 0;
     padding-left: 20px;
     list-style-type: none;
 }
 
+/* Styling for list items with background color, border radius, and hover effect */
 ul li {
     margin-bottom: 8px;
     padding: 8px;
@@ -77,12 +88,13 @@ ul li {
     transition: all 0.3s ease;
 }
 
+/* Hover effect for list items */
 ul li:hover {
     background-color: #ff54eb;
     transform: translateX(5px);
 }
 
-/* Mobile Responsive Design */
+/* Mobile Responsive Design for screen widths up to 768px */
 @media screen and (max-width: 768px) {
     body {
         padding: 5px;
@@ -130,13 +142,14 @@ ul li:hover {
         font-size: 12px;
     }
 
+    /* Link styling for mobile view */
     a {
         word-break: break-all;
         font-size: 12px;
     }
 }
 
-/* Very small screens */
+/* Responsive design for very small screens up to 320px */
 @media screen and (max-width: 320px) {
     body {
         padding: 2px;
@@ -172,7 +185,7 @@ ul li:hover {
     }
 }
 
-/* Prevent horizontal scrolling on mobile */
+/* Prevent horizontal scrolling on mobile devices */
 @media screen and (max-width: 768px) {
     html, body {
         max-width: 100%;

@@ -1,3 +1,4 @@
+/* Body Styling - Sets background, layout, and central alignment */
 body {
     margin: 0;
     min-height: 100vh;
@@ -13,6 +14,7 @@ body {
     padding: 2rem;
 }
 
+/* Container Styling - Defines layout for card container */
 .container {
     display: flex;
     flex-direction: column;
@@ -23,11 +25,12 @@ body {
     margin: 0 auto;
 }
 
+/* Card Styling - Adds visual effects and structure for individual cards */
 .card {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border-radius: 20px;
-    padding: 3rem; 
+    padding: 3rem;
     text-align: center;
     color: white;
     text-decoration: none;
@@ -38,27 +41,23 @@ body {
     overflow: hidden;
 }
 
+/* Card Hover Effect - Adds lift effect and darkens background on hover */
 .card:hover {
     transform: translateY(-5px);
     background: rgba(255, 255, 255, 0.15);
 }
 
+/* Card Title and Text - Sets typography and spacing for card headers and paragraphs */
 .card h2 {
-    font-size: 2.5rem; 
+    font-size: 2.5rem;
     margin: 1rem 0;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
 
-.card h3 {
-    font-size: 1.8rem;
-    margin: 0.5rem 0;
-    color: #e0e0e0;
-}
-
 .card p {
     margin: 1.5rem 0;
-    font-size: 1.2rem; 
+    font-size: 1.2rem;
     line-height: 1.6;
     color: #fff;
     opacity: 0.9;
@@ -67,28 +66,31 @@ body {
     margin-right: auto;
 }
 
+/* Image Container and Styling - Arranges and styles images within cards */
 .image-container {
     display: flex;
-    gap: 30px; 
+    gap: 30px;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 2rem 0; 
+    margin: 2rem 0;
 }
 
 .card-image {
-    width: 300px; 
-    height: 300px; 
+    width: 300px;
+    height: 300px;
     object-fit: cover;
     border-radius: 15px;
     transition: transform 0.3s ease;
     border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
+/* Card Image Hover Effect - Adds slight scaling and border color change */
 .card-image:hover {
     transform: scale(1.05);
     border-color: rgba(255, 255, 255, 0.4);
 }
 
+/* Fade-in Animation - Applies fade-in effect with slight delay on each card */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -112,7 +114,9 @@ body {
     animation-delay: 0.2s;
 }
 
-/* Responsive Design */
+/* Responsive Styling - Adjusts layout and card styling for various screen sizes */
+
+/* Tablet and Larger Screens - Adjusts card layout to two per row */
 @media (min-width: 768px) {
     .container {
         flex-direction: row;
@@ -121,18 +125,18 @@ body {
     }
 
     .card {
-        flex: 0 1 calc(50% - 2rem); 
-        min-width: 300px; 
+        flex: 0 1 calc(50% - 2rem);
+        min-width: 300px;
     }
 }
 
-/* Tablet Responsive */
+/* Tablet-Specific Adjustments - Reduces image and text size */
 @media (max-width: 768px) {
     .card-image {
         width: 250px;
         height: 250px;
     }
-    
+
     .card {
         padding: 2rem;
     }
@@ -146,12 +150,12 @@ body {
     }
 }
 
-/* Mobile Responsive */
+/* Mobile-Specific Adjustments - Further reduces image and text size for smaller screens */
 @media (max-width: 480px) {
     .image-container {
         gap: 15px;
     }
-    
+
     .card-image {
         width: 200px;
         height: 200px;

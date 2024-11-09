@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Metadata and stylesheet links -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Corrina's Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <style>
+        /* General styling for all elements */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+        /* Background, font, and layout settings for the body */
         body {
             margin: 0;
             background-image: url("assets/bg.jpg");
@@ -29,6 +33,7 @@
             color: #fff;
         }
 
+        /* Container styling to control maximum width */
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -56,7 +61,7 @@
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
         }
 
-        /* Navigation Cards */
+        /* Navigation Cards Grid */
         .nav-cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -66,6 +71,7 @@
             margin: 0 auto;
         }
 
+        /* Individual Card styling */
         .card {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
@@ -76,17 +82,20 @@
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
+        /* Card hover effects */
         .card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
 
+        /* Icon styling within cards */
         .card i {
             font-size: 2.5rem;
             margin-bottom: 1rem;
             color: rgb(248, 228, 254);
         }
 
+        /* Card heading and text styling */
         .card h2 {
             font-size: 1.5rem;
             margin-bottom: 0.5rem;
@@ -99,12 +108,13 @@
             margin-bottom: 1rem;
         }
 
+        /* Link styling within cards */
         .card a {
             text-decoration: none;
             color: inherit;
         }
 
-        /* Social Links */
+        /* Social Links styling */
         .social-links {
             margin-top: 3rem;
             text-align: center;
@@ -117,11 +127,12 @@
             transition: color 0.3s ease;
         }
 
+        /* Social Links hover effect */
         .social-links a:hover {
             color: rgb(233, 213, 255);
         }
 
-        /* Footer */
+        /* Footer styling */
         footer {
             margin-top: auto;
             text-align: center;
@@ -130,7 +141,7 @@
             font-size: 0.9rem;
         }
 
-        /* Animations */
+        /* Fade-in animation */
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -142,7 +153,7 @@
             }
         }
 
-        /* Media Queries */
+        /* Responsive styles for mobile screens */
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.5rem;
@@ -160,13 +171,13 @@
 </head>
 <body>
     <div class="container">
-        <!-- Hero Section -->
+        <!-- Introductory message -->
         <section class="hero">
             <h1>Let's get to know Corrina</h1>
             <p>Discover the stories, skills, and passions that make up my journey.</p>
         </section>
 
-        <!-- Navigation Cards -->
+        <!-- Navigation Cards linking to other sections -->
         <div class="nav-cards">
             <div class="card">
                 <a href="biodata.html">
@@ -193,7 +204,7 @@
             </div>
         </div>
 
-        <!-- Footer -->
+        <!-- Footer with copyright information -->
         <footer>
             <p>&copy; 2024 Corrina's Portfolio. All rights reserved.</p>
         </footer>
