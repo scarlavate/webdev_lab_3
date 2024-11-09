@@ -7,74 +7,78 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #ffffff;
-    padding: 10px;
-    line-height: 1.6;
+    padding: 5px;
+    line-height: 1.4;
     background-image: url("assets/darkpurple.jpg");
+    width: 100%;
 }
 
 .container {
     width: 100%;
-    margin: 0 auto;
-    overflow-x: auto; /* Allows horizontal scrolling if needed */
+    max-width: 100%;
+    margin: 0;
+    overflow-x: hidden;
 }
 
 .bio-card {
     background-color: rgb(187, 121, 213);
-    border-radius: 15px;
+    border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-    min-width: 320px; /* Minimum width to prevent content squishing */
+    padding: 5px;
+    width: 100%;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 20px;
-    table-layout: fixed; /* Prevents table from expanding beyond container */
-}
-
-th, td {
-    padding: 8px;
-    border: 1px solid #ebc7fe;
-    text-align: left;
-    word-wrap: break-word; /* Ensures text wraps instead of overflowing */
-    font-size: 14px; /* Slightly smaller font for mobile */
+    margin: 0;
 }
 
 th {
-    width: 100px; /* Fixed width for header column */
+    width: 80px;
     background-color: #ebc7fe;
     color: #1a237e;
     font-weight: 600;
+    font-size: 12px;
+    padding: 5px;
+    border: 1px solid #ebc7fe;
+}
+
+td {
+    padding: 5px;
+    border: 1px solid #ebc7fe;
+    text-align: left;
+    word-wrap: break-word;
+    font-size: 12px;
 }
 
 .photo-cell {
-    width: 120px;
+    width: 90px;
     text-align: center;
     vertical-align: top;
     background-color: rgb(187, 121, 213);
 }
 
 .photo {
-    width: 100px; /* Smaller photo for mobile */
+    width: 80px;
     height: auto;
-    border-radius: 10px;
-    border: 3px solid #ecadf5;
+    border-radius: 6px;
+    border: 2px solid #ecadf5;
     object-fit: cover;
 }
 
 ul {
     margin: 0;
-    padding-left: 15px;
+    padding-left: 10px;
     list-style-type: none;
 }
 
 ul li {
-    margin-bottom: 6px;
-    padding: 6px;
+    margin-bottom: 4px;
+    padding: 4px;
     background-color: #ffc5f5;
-    border-radius: 5px;
-    transition: all 0.3s ease;
+    border-radius: 4px;
+    font-size: 12px;
 }
 
 ul li:hover {
@@ -82,43 +86,50 @@ ul li:hover {
     transform: translateX(5px);
 }
 
-/* Mobile Responsive Adjustments */
-@media screen and (max-width: 768px) {
-    .container {
-        padding: 0;
+/* Make sure links don't overflow */
+a {
+    word-break: break-all;
+    font-size: 12px;
+}
+
+/* Very small screens */
+@media screen and (max-width: 320px) {
+    body {
+        padding: 2px;
     }
-    
+
     .bio-card {
-        border-radius: 10px;
-        padding: 0.5rem;
+        padding: 2px;
     }
-    
-    td[colspan="2"] {
-        max-width: calc(100vw - 130px); /* Accounts for th width and padding */
+
+    th {
+        width: 70px;
+        font-size: 11px;
+        padding: 3px;
     }
-    
-    /* Ensure links don't overflow */
-    a {
-        word-break: break-all;
+
+    td {
+        font-size: 11px;
+        padding: 3px;
+    }
+
+    .photo-cell {
+        width: 70px;
+    }
+
+    .photo {
+        width: 60px;
+    }
+
+    ul li {
+        font-size: 11px;
+        padding: 3px;
+        margin-bottom: 3px;
     }
 }
 
-/* For very small screens */
-@media screen and (max-width: 360px) {
-    body {
-        padding: 5px;
-    }
-    
-    th {
-        width: 80px;
-    }
-    
-    th, td {
-        padding: 6px;
-        font-size: 13px;
-    }
-    
-    .photo {
-        width: 80px;
-    }
+/* Prevent any horizontal scrolling */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
 }
